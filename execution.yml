@@ -1,11 +1,10 @@
-## execution:
+execution:
 - concurrency: 100
-  hold-for: 10m
-  ramp-up: 120s
-  scenario: Thread Group
+  ramp-up: 1m
+  hold-for: 5m
+  scenario: quick-test
+
 scenarios:
-  Thread Group:
+  quick-test:
     requests:
-    - label: blazedemo
-      method: GET
-      url: http://blazedemo.com/
+    - http://blazedemo.com
